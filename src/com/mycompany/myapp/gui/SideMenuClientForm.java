@@ -113,7 +113,7 @@ Container sidemenuTop ;
                 
             }
         });
-          getToolbar().addMaterialCommandToSideMenu("Reclamations", FontImage.MATERIAL_PEOPLE, new ActionListener() {
+          getToolbar().addMaterialCommandToSideMenu("Reclamations", FontImage.MATERIAL_FACE, new ActionListener() {
 
             @Override
             public void actionPerformed(ActionEvent evt) {

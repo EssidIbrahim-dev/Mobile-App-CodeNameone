@@ -23,6 +23,7 @@ import com.codename1.ui.EncodedImage;
 import com.codename1.ui.FontImage;
 import com.codename1.ui.Image;
 import com.codename1.ui.Label;
+import com.codename1.ui.List;
 import com.codename1.ui.TextArea;
 import com.codename1.ui.TextField;
 import com.codename1.ui.Toolbar;
@@ -43,6 +44,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import com.mycompany.myapp.services.ServiceAchat;
 import com.mycompany.myapp.services.ServiceProduct;
+import java.util.Arrays;
 
 /**
  * GUI builder created Form
@@ -74,12 +76,23 @@ public class ListProduct extends SideMenuClientForm {
         this.products=products;
          Toolbar tb = getToolbar();
         tb.setTitleCentered(false);
+      
+        String[] listS=new String[5];
+        for(int i=0;i<products.size();i++){
+            listS[i]=products.get(i).getProduct_name();
+        }
          
         Button menuButton = new Button("");
         menuButton.setUIID("Title");
         FontImage.setMaterialIcon(menuButton, FontImage.MATERIAL_MENU);
         menuButton.addActionListener(e -> getToolbar().openSideMenu());
-        
+       // AutoCompleteTextField ac = new AutoCompleteTextField(listS[0],listS[1],listS[2],listS[3],listS[4]);
+        AutoCompleteTextField ac = new AutoCompleteTextField(listS);
+        ac.setColumns(15);
+        ac.setHint("Search ...");
+        ac.setMinimumElementsShownInPopup(5);
+
+
          Button rechercher=new Button("Search");
                  TextField txtRecherche = new TextField("", "By product", 15, TextArea.ANY);
 
@@ -89,7 +102,7 @@ public class ListProduct extends SideMenuClientForm {
             public void actionPerformed(ActionEvent evt) {
                 products.clear();
 
-                String name=txtRecherche.getText().toString();
+                String name=ac.getText().toString();
                ArrayList<Product> products1=ServiceProduct.getInstance().findProducts(name);
                ListProduct listProduct=new ListProduct(res,products1);
                listProduct.show();
@@ -102,7 +115,7 @@ public class ListProduct extends SideMenuClientForm {
           searchC.add(txtRecherche);
           searchC.add(rechercher);*/
            Container remainingTasks = BoxLayout.encloseX(
-                        txtRecherche,
+                        ac,
                    rechercher
                 );
         remainingTasks.setUIID("RemainingTasks");

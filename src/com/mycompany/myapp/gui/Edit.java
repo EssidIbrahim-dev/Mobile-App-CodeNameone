@@ -5,6 +5,7 @@
  */
 package com.mycompany.myapp.gui;
 
+import com.codename1.charts.util.ColorUtil;
 import com.codename1.ui.Button;
 import com.codename1.ui.Container;
 import com.codename1.ui.FontImage;
@@ -79,8 +80,22 @@ public class Edit extends SideMenuClientForm {
         c.getStyle().setBgColor(0xff0000);
 
         TextField txtQte=new TextField("", "1234", 20, TextArea.NUMERIC);
+        txtQte.setUIID("txtQte");
+        txtQte.getStyle().setBgTransparency(255);
+
         txtQte.setHint("Donner la nouveau quantite");
         Button valider=new Button("Editer");
+         valider.setUIID("valider");
+        valider.getStyle().setBgTransparency(255);
+        valider.getStyle().setBgColor(ColorUtil.rgb(18, 97, 160));
+        valider.getStyle().setFgColor(ColorUtil.WHITE);
+        valider.getStyle().setMarginTop(60);
+        valider.getStyle().setMarginLeft(60);
+        valider.getStyle().setMarginRight(60);
+
+        valider.getStyle().setPaddingLeft(20);
+        valider.getStyle().setPaddingTop(3);
+        valider.getStyle().setPaddingBottom(3);
         valider.addActionListener(new ActionListener() {
 
             @Override

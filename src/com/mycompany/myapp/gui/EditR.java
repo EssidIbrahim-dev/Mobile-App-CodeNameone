@@ -85,8 +85,21 @@ public class EditR extends SideMenuClientForm {
          txtRecherche.setUIID("txtRecherche");
          txtRecherche.getStyle().setFgColor(ColorUtil.BLACK);
          txtRecherche.setText(r.getContenu());
+         txtRecherche.getStyle().setBgTransparency(255);
+
          c.add(txtRecherche);
           Button ajouter=new Button("Ajouter");
+                 ajouter.setUIID("ajouter");
+        ajouter.getStyle().setBgTransparency(255);
+        ajouter.getStyle().setBgColor(ColorUtil.rgb(18, 97, 160));
+        ajouter.getStyle().setFgColor(ColorUtil.WHITE);
+        ajouter.getStyle().setMarginTop(60);
+        ajouter.getStyle().setMarginLeft(60);
+        ajouter.getStyle().setMarginRight(60);
+
+        ajouter.getStyle().setPaddingLeft(20);
+        ajouter.getStyle().setPaddingTop(3);
+        ajouter.getStyle().setPaddingBottom(3);
          ajouter.addActionListener(new ActionListener() {
 
             @Override
