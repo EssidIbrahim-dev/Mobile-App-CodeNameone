@@ -86,7 +86,6 @@ Container sidemenuTop ;
             @Override
             public void actionPerformed(ActionEvent evt) {
  ArrayList<Product> products=ServiceProduct.getInstance().getAllProducts();
- System.out.println(products);
         Resources theme=null;
         
         ListProduct listProduct=new ListProduct(theme,products);

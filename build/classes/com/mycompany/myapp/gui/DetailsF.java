@@ -5,6 +5,7 @@
  */
 package com.mycompany.myapp.gui;
 
+import com.codename1.charts.util.ColorUtil;
 import com.codename1.components.SpanLabel;
 import com.codename1.ui.Button;
 import com.codename1.ui.Container;
@@ -58,8 +59,8 @@ public class DetailsF extends SideMenuGestionnaireForm {
                                     new Label(LoginForm.nom+" "+LoginForm.prenom, "Title"),
                                     new Label("Client", "SubTitle")
                                 )
-                            ),
-                         GridLayout.encloseIn(2, remainingTasks, completedTasks)
+                   )//,
+               // GridLayout.encloseIn(2, remainingTasks, completedTasks)
                 );
          tb.setTitleComponent(titleCmp);
      /*   Toolbar cmdToolbar=null;
@@ -75,10 +76,14 @@ public class DetailsF extends SideMenuGestionnaireForm {
                 }
             });*/
       Container c=new Container(new BoxLayout(BoxLayout.Y_AXIS));
+      c.getAllStyles().setBgTransparency(255);
+
+        c.getStyle().setBgColor(ColorUtil.WHITE);
+        c.getStyle().setMarginTop(30);
+        c.getStyle().setMarginLeft(50);
+        c.getStyle().setMarginRight(50);
 
       Container c1=new Container(new GridLayout(6, 2));
-      c1.add(new SpanLabel("ID"));
-      c1.add(new SpanLabel(Integer.toString(f.getId())));
       c1.add(new SpanLabel("FirstName"));
       c1.add(new SpanLabel(f.getFirstname()));
       c1.add(new SpanLabel("LastName"));

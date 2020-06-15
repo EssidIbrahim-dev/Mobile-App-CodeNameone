@@ -68,8 +68,8 @@ public class Commandes extends SideMenuClientForm {
                                     new Label(LoginForm.nom+" "+LoginForm.prenom, "Title"),
                                     new Label("Client", "SubTitle")
                                 )
-                            ),
-                         GridLayout.encloseIn(2, remainingTasks, completedTasks)
+                     )//,
+               // GridLayout.encloseIn(2, remainingTasks, completedTasks)
                 );
          tb.setTitleComponent(titleCmp);
       /*  Toolbar cmdToolbar=null;
@@ -126,7 +126,7 @@ public class Commandes extends SideMenuClientForm {
            c6.add(new SpanLabel("Product"));
            c6.add(spanLabel1);
            c6.add(new SpanLabel("Quantite "+c.getQte()));
-           c6.add(new SpanLabel("Prix"));
+           c6.add(new SpanLabel("Prix unit"));
            c6.add(Double.toString(prix));
            c2.add(c6);
 

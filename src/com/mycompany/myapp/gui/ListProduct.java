@@ -284,7 +284,7 @@ public class ListProduct extends SideMenuClientForm {
                    c3.getStyle().setBgColor(ColorUtil.WHITE);
                    c3.getStyle().setMarginTop(30);
                    c3.getStyle().setMarginLeft(35);
-                   c3.getStyle().setMarginRight(35);
+                   c3.getStyle().setMarginRight(10);
                    //c3.getStyle().set
              img.scaled(100, 100);
              Label lbl=new Label();
@@ -304,7 +304,10 @@ public class ListProduct extends SideMenuClientForm {
          
          SpanLabel sp1 = new SpanLabel();
           sp1.setUIID("sp1");
-         sp1.setText(Double.toString(p.getPriceHT())+" Dt");
+          double toto=p.getPriceTTC();
+          toto=(double)((int)(toto*100))/100;
+
+         sp1.setText(toto+" Dt");
          c5.add(sp);
          c5.add(sp1);
 

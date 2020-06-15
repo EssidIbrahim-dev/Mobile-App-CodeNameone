@@ -134,6 +134,29 @@ ArrayList<Reserver> reservations=ServiceRes.getInstance().getReservs();
                new StatsStaff(res).show();
           }
         });
+                 getToolbar().addMaterialCommandToSideMenu("Achat Stat", FontImage.MATERIAL_TRENDING_UP,new ActionListener() {
+
+            @Override
+            public void actionPerformed(ActionEvent evt) {
+                              Resources res=null;
+               new StatsAchat(res).show();
+          }
+        });
+                     getToolbar().addMaterialCommandToSideMenu("List entrepot", FontImage.MATERIAL_TRENDING_UP,new ActionListener() {
+
+            @Override
+            public void actionPerformed(ActionEvent evt) {
+                              new listEntrepot().start();
+          }
+        });
+                     
+                     getToolbar().addMaterialCommandToSideMenu("List product", FontImage.MATERIAL_TRENDING_UP,new ActionListener() {
+
+            @Override
+            public void actionPerformed(ActionEvent evt) {
+                              new listProduct_1().start();
+          }
+        });
         getToolbar().addMaterialCommandToSideMenu("  Update Account", FontImage.MATERIAL_SETTINGS,  e -> new UpdateaccForm(res).show());
        
         getToolbar().addMaterialCommandToSideMenu("Logout", FontImage.MATERIAL_EXIT_TO_APP,e -> new LoginForm(res).show());  

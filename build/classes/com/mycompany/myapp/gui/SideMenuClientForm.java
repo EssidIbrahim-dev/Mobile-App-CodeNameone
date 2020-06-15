@@ -86,7 +86,6 @@ Container sidemenuTop ;
             @Override
             public void actionPerformed(ActionEvent evt) {
  ArrayList<Product> products=ServiceProduct.getInstance().getAllProducts();
- System.out.println(products);
         Resources theme=null;
         
         ListProduct listProduct=new ListProduct(theme,products);
@@ -113,7 +112,7 @@ Container sidemenuTop ;
                 
             }
         });
-          getToolbar().addMaterialCommandToSideMenu("Reclamations", FontImage.MATERIAL_PEOPLE, new ActionListener() {
+          getToolbar().addMaterialCommandToSideMenu("Reclamations", FontImage.MATERIAL_FACE, new ActionListener() {
 
             @Override
             public void actionPerformed(ActionEvent evt) {

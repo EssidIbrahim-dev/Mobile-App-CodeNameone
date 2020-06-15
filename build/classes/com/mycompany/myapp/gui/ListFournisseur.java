@@ -107,7 +107,9 @@ ScaleImageButton fillButton = new ScaleImageButton(icon);
 
                    c1.getStyle().setBgColor(ColorUtil.WHITE);
                    c1.getStyle().setMarginTop(30);
-                   c1.getStyle().setMarginLeft(50);
+                   c1.getStyle().setPaddingTop(50);
+                   c1.getStyle().setPaddingBottom(50);
+                   c1.getStyle().setMarginLeft(150);
                    c1.getStyle().setMarginRight(50);
                       c1.add(new SpanLabel(f.getFirstname()));
                       c1.add(new SpanLabel(f.getLastname()));

@@ -8,6 +8,7 @@ package com.mycompany.myapp.gui;
 import com.codename1.charts.util.ColorUtil;
 import com.codename1.ui.Button;
 import com.codename1.ui.Container;
+import com.codename1.ui.Dialog;
 import com.codename1.ui.FontImage;
 import com.codename1.ui.Label;
 import com.codename1.ui.TextArea;
@@ -69,8 +70,8 @@ public class Edit extends SideMenuClientForm {
                                     new Label(LoginForm.nom+" "+LoginForm.prenom, "Title"),
                                     new Label("Client", "SubTitle")
                                 )
-                            ),
-                         GridLayout.encloseIn(2, remainingTasks, completedTasks)
+                          )//,
+               // GridLayout.encloseIn(2, remainingTasks, completedTasks)
                 );
          tb.setTitleComponent(titleCmp);
         this.prodAchat=prodAchat;
@@ -100,11 +101,23 @@ public class Edit extends SideMenuClientForm {
 
             @Override
             public void actionPerformed(ActionEvent evt) {
-                int qte=Integer.parseInt(txtQte.getText().toString());
+                try{
+                    int qte=Integer.parseInt(txtQte.getText().toString());
                 ServiceAchat.getInstance().editAchatProduct(prodAchat.getId(), username, qte);
                 System.out.println("qUANTITE modifie");
                 Panier panier=new Panier(res,username);
                 panier.show();
+                }
+                catch(Exception e){
+                    Dialog d = new Dialog("Popup Title");
+        TextArea popupBody = new TextArea("valeur pas numeric", 3, 10);
+        popupBody.setUIID("PopupBody");
+        popupBody.setEditable(false);
+        d.setLayout(new BorderLayout());
+        d.add(BorderLayout.CENTER, popupBody);
+        d.showPopupDialog(valider);
+                }
+                
                 
             }
         });

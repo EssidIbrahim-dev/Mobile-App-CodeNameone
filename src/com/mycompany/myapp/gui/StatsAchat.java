@@ -61,8 +61,8 @@ public class StatsAchat extends SideMenuGestionnaireForm{
                                     new Label(LoginForm.nom+" "+LoginForm.prenom, "Title"),
                                     new Label("Client", "SubTitle")
                                 )
-                            ),
-                         GridLayout.encloseIn(2, remainingTasks, completedTasks)
+                      )//,
+               // GridLayout.encloseIn(2, remainingTasks, completedTasks)
                 );
          tb.setTitleComponent(titleCmp);
         

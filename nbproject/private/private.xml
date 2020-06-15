@@ -4,25 +4,11 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/Ibrahim/Desktop/mobile1/haz/Pidev/src/com/mycompany/myapp/utils/Statics.java</file>
-            <file>file:/C:/Users/Ibrahim/Desktop/mobile1/haz/Pidev/src/com/mycompany/myapp/gui/ListReclamations.java</file>
-            <file>file:/C:/Users/Ibrahim/Desktop/mobile1/haz/Pidev/src/com/mycompany/myapp/gui/ProfileClientForm.java</file>
-            <file>file:/C:/Users/Ibrahim/Desktop/mobile1/haz/Pidev/src/com/mycompany/myapp/gui/ShowProduct.java</file>
-            <file>file:/C:/Users/Ibrahim/Desktop/mobile1/haz/Pidev/src/com/mycompany/myapp/gui/ListFournisseur.java</file>
             <file>file:/C:/Users/Ibrahim/Desktop/mobile1/haz/Pidev/src/com/mycompany/myapp/gui/Commandes.java</file>
-            <file>file:/C:/Users/Ibrahim/Desktop/mobile1/haz/Pidev/src/com/mycompany/myapp/gui/Edit.java</file>
-            <file>file:/C:/Users/Ibrahim/Desktop/mobile1/haz/Pidev/src/com/mycompany/myapp/gui/AjouterR.java</file>
-            <file>file:/C:/Users/Ibrahim/Desktop/mobile1/haz/Pidev/src/com/mycompany/myapp/gui/Panier.java</file>
-            <file>file:/C:/Users/Ibrahim/Desktop/mobile1/haz/Pidev/src/com/mycompany/myapp/MyApplication.java</file>
-            <file>file:/C:/Users/Ibrahim/Desktop/mobile1/haz/Pidev/src/com/mycompany/myapp/gui/DetailsR.java</file>
-            <file>file:/C:/Users/Ibrahim/Desktop/mobile1/haz/Pidev/src/com/mycompany/myapp/gui/StatsStaff.java</file>
+            <file>file:/C:/Users/Ibrahim/Desktop/mobile1/haz/Pidev/src/com/mycompany/myapp/utils/Statics.java</file>
             <file>file:/C:/Users/Ibrahim/Desktop/mobile1/haz/Pidev/src/com/mycompany/myapp/gui/ListProduct.java</file>
-            <file>file:/C:/Users/Ibrahim/Desktop/mobile1/haz/Pidev/src/com/mycompany/myapp/gui/ProfileGestionnaireForm.java</file>
-            <file>file:/C:/Users/Ibrahim/Desktop/mobile1/haz/Pidev/src/com/mycompany/myapp/gui/ChangePassword.java</file>
-            <file>file:/C:/Users/Ibrahim/Desktop/mobile1/haz/Pidev/src/com/mycompany/myapp/gui/SideMenuGestionnaireForm.java</file>
-            <file>file:/C:/Users/Ibrahim/Desktop/mobile1/haz/Pidev/src/com/mycompany/myapp/gui/SideMenuClientForm.java</file>
-            <file>file:/C:/Users/Ibrahim/Desktop/mobile1/haz/Pidev/src/com/mycompany/myapp/gui/EditR.java</file>
-            <file>file:/C:/Users/Ibrahim/Desktop/mobile1/haz/Pidev/src/com/mycompany/myapp/gui/DetailsF.java</file>
+            <file>file:/C:/Users/Ibrahim/Desktop/mobile1/haz/Pidev/src/com/mycompany/myapp/services/ProductService.java</file>
+            <file>file:/C:/Users/Ibrahim/Desktop/mobile1/haz/Pidev/src/com/mycompany/myapp/services/ServiceProduct.java</file>
         </group>
     </open-files>
 </project-private>

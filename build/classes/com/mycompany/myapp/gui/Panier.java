@@ -48,6 +48,7 @@ public class Panier extends SideMenuClientForm {
     Image img;
     Container titleCmp = null;
 
+
     public Panier(Resources res, String username) {
         /* Toolbar pannierToolbar=null;
          pannierToolbar=this.getToolbar();
@@ -84,8 +85,8 @@ public class Panier extends SideMenuClientForm {
                                 new Label(LoginForm.nom + " " + LoginForm.prenom, "Title"),
                                 new Label("Client", "SubTitle")
                         )
-                ),
-                GridLayout.encloseIn(2, remainingTasks, completedTasks)
+                )//,
+               // GridLayout.encloseIn(2, remainingTasks, completedTasks)
         );
         tb.setTitleComponent(titleCmp);
         try {
@@ -100,7 +101,7 @@ public class Panier extends SideMenuClientForm {
         this.username = username;
         double prixTotal = 0;
         System.out.println("achat");
-        for (ProdAchat p : ServiceAchat.getInstance().getProdAchat("bra19")) {
+        for (ProdAchat p : ServiceAchat.getInstance().getProdAchat(LoginForm.username)) {
             Container c1 = new Container(new BoxLayout(BoxLayout.Y_AXIS));
             Container c2 = new Container(new GridLayout(1, 3));
             Container c3 = new Container(new BoxLayout(BoxLayout.Y_AXIS));
@@ -110,7 +111,10 @@ public class Panier extends SideMenuClientForm {
             c2.getStyle().setBgColor(ColorUtil.WHITE);
             c2.getStyle().setMarginTop(30);
             c2.getStyle().setMarginLeft(50);
-            c2.getStyle().setMarginRight(50);
+            c2.getStyle().setMarginRight(20);
+            c3.getStyle().setPaddingLeft(10);
+            c3.getStyle().setPaddingRight(10);
+
 
             SpanLabel spanLabel = new SpanLabel();
             SpanLabel spanLabel1 = new SpanLabel();
@@ -219,7 +223,9 @@ public class Panier extends SideMenuClientForm {
         Container c4 = new Container(new BoxLayout(BoxLayout.Y_AXIS));
         Container c5 = new Container(new BoxLayout(BoxLayout.Y_AXIS));
         c5.add(new SpanLabel("Prix totale"));
-        c5.add(new SpanLabel(Double.toString(prixTotal)));
+       double toto=prixTotal;
+toto=(double)((int)(toto*100))/100;
+        c5.add(new SpanLabel(Double.toString(toto)));
         c5.getAllStyles().setBgTransparency(255);
 
         c5.getStyle().setBgColor(ColorUtil.WHITE);

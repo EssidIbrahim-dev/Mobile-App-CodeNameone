@@ -11,5 +11,6 @@ package com.mycompany.myapp.utils;
  */
 public class Statics {
     public static final String BASE_URL="http://localhost/pidev/web/app_dev.php";
-    
+    public static final String BASE_URL2="http://localhost/pidev/web/app_dev.php/api/Tweeter/post";
+   
 }
